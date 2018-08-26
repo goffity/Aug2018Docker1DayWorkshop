@@ -5,10 +5,17 @@ services:
     build: backend
     ports:
       - "5000"
+    networks: 
+      - backend6
 
   frontend:
     build: frontend
     ports:
       - "3000:3000"
-    links:
-      - backend6:backend
+    networks: 
+      - backend6
+    # links:
+    #   - backend6:backend
+
+networks: 
+  backend6:
