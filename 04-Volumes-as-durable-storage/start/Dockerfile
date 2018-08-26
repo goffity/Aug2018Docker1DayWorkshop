@@ -9,4 +9,6 @@ COPY . /app
 
 EXPOSE 3000
 
+VOLUME ["/app/public"]
+
 CMD ["node", "server"]
